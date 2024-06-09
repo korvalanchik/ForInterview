@@ -80,7 +80,7 @@ public class MyLinkedList<T> {
         System.out.println("After removal:");
         list.printList();
 
-        System.out.println("Find appple: " + list.find("appple"));
+        System.out.println("Find apple: " + list.find("apple"));
     }
 
 }
