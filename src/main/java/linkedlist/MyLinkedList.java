@@ -20,7 +20,6 @@ public class MyLinkedList<T> {
     }
 
 
-
     public boolean delete(T body) {
         if (head == null) {
             return false;
@@ -31,18 +30,26 @@ public class MyLinkedList<T> {
             return true;
         }
 
-        Node<T> current = head;
-        Node<T> previous = null;
+        Node<T> current = head.next();
+        Node<T> previous = head;
 
         while (current != null) {
             if (current.body().equals(body)) {
-                if (previous != null) {
-                    previous = new Node<>(previous.body(), current.next());
-                }
+                previous.next = current.next();
                 return true;
             }
             previous = current;
             current = current.next();
+        }
+        return false;
+    }
+
+
+    public boolean find(T body) {
+        for(Node<T> current = head; current != null; current = current.next()) {
+            if(current.body().equals(body)) {
+                return true;
+            }
         }
         return false;
     }
@@ -63,12 +70,17 @@ public class MyLinkedList<T> {
         list.add("strawberry");
 
         System.out.println("Before removal:");
-        list.printList(); // Output: apple, banana, apple
+        list.printList();
 
-        list.delete("apple"); // Видаляє перший вузол з даними "apple"
+        list.delete("cherry");
+        list.delete("strawberry");
+
+
 
         System.out.println("After removal:");
-        list.printList(); // Output: banana, apple
+        list.printList();
+
+        System.out.println("Find appple: " + list.find("appple"));
     }
 
 }
