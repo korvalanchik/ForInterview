@@ -1,0 +1,9 @@
+
+U
+java:S1854	"8Remove this useless assignment to local variable "file".(Ç“«á8Ö®İ€2
+F
+java:S1481	")Remove this unused "file" local variable.(Ç“«á8ì®İ€2
+]	java:S125
+"<This block of commented-out lines of code should be removed.(¹Èˆ³øÿÿÿÿ8ì®İ€2
+P
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8ö®İ€2
